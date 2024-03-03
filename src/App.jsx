@@ -3,6 +3,7 @@ import './App.css'
 import { useDispatch } from 'react-redux'
 import authService from './appwrite/auth'
 import { login,logout } from './store/authSlice'
+import {Header,Footer} from './components'
 
 function App() {
 
@@ -23,10 +24,16 @@ function App() {
 
   // console.log(import.meta.env.VITE_APPWRITE_URL)
 
-  return (
-    <>
-      <h1>Blog Writing</h1>
-    </>
+  return(
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
+          {/* <outlet /> */}
+        </main>
+        <Footer />
+      </div>
+    </div>
   )
 }
 
